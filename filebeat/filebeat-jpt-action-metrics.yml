@@ -41,5 +41,9 @@ processors:
   - decode_json_fields:
       fields: ["message"]
       target: "actionMetric"
+  - script:
+      lang: javascript
+      id: parseDuration
+      file: ${path.config}/parseDuration.js
 
 
