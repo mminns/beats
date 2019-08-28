@@ -1,0 +1,20 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - ${HOME}/test-results/*/action-metrics.jpt
+
+
+setup.template.settings:
+  index.number_of_shards: 1
+
+setup.kibana:
+  host: "34.253.121.248:5601"
+
+output.elasticsearch:
+    hosts: ["34.253.121.248:9200"]
+
+#output.file:
+#    enabled: true
+#    path: "/tmp/filebeat"
+#    filename: filebeat
