@@ -45,5 +45,7 @@ processors:
       lang: javascript
       id: parseDuration
       file: ${path.config}/parseDuration.js
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
 
 
